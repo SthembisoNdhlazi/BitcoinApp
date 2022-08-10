@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5vO-XM-jxI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SIx-cM-SD4">
+            <objects>
+                <tabBarController id="5vO-XM-jxI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k7U-pb-D0l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xBl-zb-6Hb" kind="relationship" relationship="viewControllers" id="eVg-eY-omj"/>
+                        <segue destination="19y-6v-fpW" kind="relationship" relationship="viewControllers" id="YzH-zX-rV8"/>
+                        <segue destination="ukp-Q3-bZD" kind="relationship" relationship="viewControllers" id="Hoe-74-ylm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oB0-hl-ukD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-707" y="90"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="1EJ-3j-VQL">
+            <objects>
+                <viewController id="ukp-Q3-bZD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BdN-W0-81M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Would you like to learn more about bitcoin? Go to https://bitcoin.org/en/" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vtg-MX-8Tc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="393"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-rI-5cf">
+                                <rect key="frame" x="20" y="445" width="374" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zQ4-9L-TdA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="questionmark" catalog="system" id="RXH-KL-JW6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3G-I9-IOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704.34782608695662" y="811.60714285714278"/>
+        </scene>
+        <!--Bitcoin Prices-->
+        <scene sceneID="Vyl-Ry-m1T">
+            <objects>
+                <viewController id="xBl-zb-6Hb" customClass="ViewController" customModule="BitcoinApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="50u-oP-Obu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vBK-ZU-sI5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The current bitcoin prices are as follows" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFm-0I-SP4">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DOr-hj-RSm">
+                                        <rect key="frame" x="0.0" y="128" width="414" height="128.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="cUQ-g6-Fm1">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="128.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqC-bv-ds6">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="128.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yV9-cT-Vi2">
+                                        <rect key="frame" x="0.0" y="256.5" width="414" height="128"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ethereum" translatesAutoresizingMaskIntoConstraints="NO" id="a5z-RF-A3D">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="128"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ia5-Ud-YeL">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="128"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="m2a-ui-bS0">
+                                        <rect key="frame" x="0.0" y="384.5" width="414" height="128"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar" translatesAutoresizingMaskIntoConstraints="NO" id="cIc-wn-ks0">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="128"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olA-P5-sKw">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="128"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a1F-UH-ygF">
+                                        <rect key="frame" x="0.0" y="512.5" width="414" height="128.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LrysCc5Q_400x400" translatesAutoresizingMaskIntoConstraints="NO" id="4Ad-JX-cjE">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="128.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfe-cx-saw">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="128.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last updated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzP-FT-Fvy">
+                                        <rect key="frame" x="0.0" y="641" width="414" height="128"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nk2-V2-nnd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vBK-ZU-sI5" firstAttribute="top" secondItem="Nk2-V2-nnd" secondAttribute="top" id="2ca-Ta-wdl"/>
+                            <constraint firstItem="Nk2-V2-nnd" firstAttribute="trailing" secondItem="vBK-ZU-sI5" secondAttribute="trailing" id="GpH-PC-UGg"/>
+                            <constraint firstItem="Nk2-V2-nnd" firstAttribute="bottom" secondItem="vBK-ZU-sI5" secondAttribute="bottom" id="Gxg-nq-xZ5"/>
+                            <constraint firstItem="vBK-ZU-sI5" firstAttribute="leading" secondItem="Nk2-V2-nnd" secondAttribute="leading" id="lNO-Sz-Oky"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bitcoin Prices" image="bitcoinsign.circle" catalog="system" id="dIi-Qo-k5U"/>
+                    <connections>
+                        <outlet property="btcLabel" destination="AqC-bv-ds6" id="Q7W-3t-sOy"/>
+                        <outlet property="ethLabel" destination="ia5-Ud-YeL" id="QFc-lz-Xtz"/>
+                        <outlet property="lastUpdated" destination="MzP-FT-Fvy" id="G0B-HI-Vwj"/>
+                        <outlet property="ltcLabel" destination="Qfe-cx-saw" id="jym-sc-SVh"/>
+                        <outlet property="usdLabel" destination="olA-P5-sKw" id="cWp-Dz-93J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4mm-AG-sDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1530.4347826086957" y="811.60714285714278"/>
+        </scene>
+        <!--What is Bitcoin?-->
+        <scene sceneID="JL5-z7-cPt">
+            <objects>
+                <viewController id="19y-6v-fpW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FEp-sG-hAE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="EPy-QJ-clp">
+                                <rect key="frame" x="40" y="92" width="334" height="297"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LRb-0R-ZUY">
+                                <rect key="frame" x="40" y="438" width="334" height="247"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="CiL-c3-yPH"/>
+                                </constraints>
+                                <string key="text">Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MPR-EE-h6C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LRb-0R-ZUY" firstAttribute="top" secondItem="EPy-QJ-clp" secondAttribute="bottom" constant="49" id="17y-ak-VV1"/>
+                            <constraint firstItem="MPR-EE-h6C" firstAttribute="bottom" secondItem="LRb-0R-ZUY" secondAttribute="bottom" constant="128" id="1Sk-Ob-KEc"/>
+                            <constraint firstItem="MPR-EE-h6C" firstAttribute="trailing" secondItem="EPy-QJ-clp" secondAttribute="trailing" constant="40" id="31w-xi-kZY"/>
+                            <constraint firstItem="EPy-QJ-clp" firstAttribute="top" secondItem="MPR-EE-h6C" secondAttribute="top" constant="48" id="8gI-JZ-nRU"/>
+                            <constraint firstItem="MPR-EE-h6C" firstAttribute="trailing" secondItem="LRb-0R-ZUY" secondAttribute="trailing" constant="40" id="Ybz-9j-Pe9"/>
+                            <constraint firstItem="LRb-0R-ZUY" firstAttribute="leading" secondItem="MPR-EE-h6C" secondAttribute="leading" constant="40" id="bWw-aq-iDw"/>
+                            <constraint firstItem="LRb-0R-ZUY" firstAttribute="top" secondItem="EPy-QJ-clp" secondAttribute="bottom" constant="49" id="eTO-WQ-c84"/>
+                            <constraint firstItem="EPy-QJ-clp" firstAttribute="leading" secondItem="MPR-EE-h6C" secondAttribute="leading" constant="40" id="zOp-pc-tKn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="What is Bitcoin?" image="bitcoinsign.circle.fill" catalog="system" id="WmM-f8-afU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huA-TW-Ueh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417.39130434782612" y="811.60714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LrysCc5Q_400x400" width="400" height="400"/>
+        <image name="bitcoin" width="500" height="500"/>
+        <image name="bitcoinsign.circle" catalog="system" width="128" height="121"/>
+        <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="dollar" width="1200" height="900"/>
+        <image name="ethereum" width="900" height="506"/>
+        <image name="questionmark" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
